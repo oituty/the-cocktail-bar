@@ -1,18 +1,19 @@
-# Nuxt 3 Minimal Starter
 
-Confira a [documentação do Nuxt 3](https://nuxt.com/docs/getting-started/introduction) para saber mais.
+# TheCocktail Bar
 
-## Introdução
+- Plataforma para visualizar os coquetéis disponíveis no [TheCocktailDB](https://www.thecocktaildb.com/api.php)
 
-Este projeto é uma aplicação web desenvolvida com NuxtJS, um poderoso framework baseado em Vue.js. Ele incorpora várias funcionalidades modernas, incluindo Storybook para documentação de componentes, Tailwind CSS para estilos, Pinia para gerenciamento de estado, além de ferramentas integradas de testes e acessibilidade.
+## Nuxt 3 Minimal Starter
 
-## Pré-Requisitos
+- Este projeto é uma aplicação web desenvolvida com NuxtJS, um poderoso framework baseado em Vue.js. Ele incorpora várias funcionalidades modernas, incluindo Storybook para documentação de componentes, Tailwind CSS para estilos, Pinia para gerenciamento de estado, além de ferramentas integradas de testes e acessibilidade.
+
+- Confira a [documentação do Nuxt 3](https://nuxt.com/docs/getting-started/introduction) para saber mais.
+
+### Pré-Requisitos
 
 - **Node.js**: Versão 18. Certifique-se de ter a versão correta instalada para compatibilidade ideal.
 
 ## Instalação
-
-Siga estas etapas para configurar o projeto em sua máquina local.
 
 ### Clonando o Repositório
 
@@ -34,6 +35,7 @@ npm install
 ## Executando o Projeto
 
 ### Iniciando o Servidor de Desenvolvimento
+
 Para iniciar o servidor de desenvolvimento, execute:
 
 ```bash
@@ -44,15 +46,11 @@ Após iniciar, o projeto estará disponível em `http://localhost:3000`.
 
 ### Visualizando a Documentação Tailwind
 
-Para acessar a documentação do Tailwind, navegue para `http://localhost:3000/_tailwind` em seu navegador.
+- Após iniciar o projeto, para acessar a documentação do Tailwind, navegue para `http://localhost:3000/_tailwind` em seu navegador.
 
-## Funcionalidades do Projeto
+### Visualizando a Documentação Storybook
 
-### Storybook para Documentação de Componentes
-
-O Storybook é utilizado para documentar e visualizar componentes de forma isolada.
-
-Execute o seguinte comando para iniciar o Storybook:
+O Storybook é utilizado para documentar e visualizar componentes de forma isolada. Execute o seguinte comando para iniciar o Storybook:
 
 ```bash
 npm run storybook
@@ -60,15 +58,9 @@ npm run storybook
 
 Após iniciar, o Storybook estará acessível em `http://localhost:3001`.
 
-### Pinia para Gerenciamento de Estado
-
-Pinia é usado para gerenciar o estado dos favoritos na aplicação.
-
 ### Testes de Componentes com Storybook Test Runner
 
-O Storybook Test Runner é usado para realizar testes automatizados nos componentes e interações.
-
-Para executar os testes, use o comando:
+O Storybook Test Runner é usado para realizar testes automatizados nos componentes e interações. Para executar os testes, use o comando:
 
 ```bash
 npm run test:storybook
@@ -76,9 +68,14 @@ npm run test:storybook
 
 ### Testando Acessibilidade com Storybook Accessibility
 
-Esta ferramenta ajuda a garantir que os componentes atendam aos padrões de acessibilidade.
+- Esta ferramenta ajuda a garantir que os componentes atendam aos padrões de acessibilidade. A acessibilidade pode ser testada diretamente no Storybook, onde addons específicos fornecem feedback em tempo real.
+- Para visualizar rode o storybook e acesse a aba de acessibilidade no componente escolhido no `http://localhost:3001` 
 
-A acessibilidade pode ser testada diretamente no Storybook, onde addons específicos fornecem feedback em tempo real.
+## Módulos adicionais
+
+### Pinia para Gerenciamento de Estado
+
+Pinia é usado para gerenciar o estado dos favoritos na aplicação.
 
 ### Módulo Google Fonts
 
