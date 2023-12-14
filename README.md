@@ -46,7 +46,7 @@ Após iniciar, o projeto estará disponível em `http://localhost:3000`.
 
 ### Visualizando a Documentação Tailwind
 
-- Após iniciar o projeto, para acessar a documentação do Tailwind, navegue para `http://localhost:3000/_tailwind` em seu navegador.
+- Após iniciar o projeto, para acessar a documentação do Tailwind, navegue para `http://localhost:3000/_tailwind/` em seu navegador.
 
 ### Visualizando a Documentação Storybook
 
