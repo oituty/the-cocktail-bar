@@ -19,7 +19,7 @@ export default defineNuxtConfig({
   pinia: {
     storesDirs: ['./stores/**'],
   },
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/tailwind.css'],
   image: {
     dir: 'assets/images',
   },
@@ -30,4 +30,12 @@ export default defineNuxtConfig({
       mode: 'out-in', // default
     },
   },
+  postcss: {
+    plugins: {
+      // cssnano para minificação de CSS
+      cssnano: process.env.NODE_ENV === 'production' ? { preset: 'default' } : false,
+    },
+    
+  },
+
 });
