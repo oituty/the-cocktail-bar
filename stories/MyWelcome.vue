@@ -1,7 +1,18 @@
 <template>
   <h1> Welcome Nuxt to Storybook  </h1>
   <NuxtWelcome />
+  <button class="readmore" @click="buttonClicked">Clique Aqui</button>
 </template>
+
+<script>
+export default {
+  methods: {
+    buttonClicked() {
+      console.log('Botão clicado!');
+    },
+  },
+};
+</script>
 
 <style>
 .readmore {
