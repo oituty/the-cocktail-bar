@@ -20,9 +20,6 @@ export default defineNuxtConfig({
     storesDirs: ['./stores/**'],
   },
   css: ['~/assets/css/tailwind.css'],
-  image: {
-    dir: 'assets/images',
-  },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     layoutTransition: {
