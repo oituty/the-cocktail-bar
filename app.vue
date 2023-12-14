@@ -43,6 +43,8 @@ const removeFromFavorites = (cocktailId: string) => {
 const favoritesList = computed(() => favoritesStore.listFavorites());
 </script>
 <style>
+@import '~/assets/css/tailwind.css'; /** Necessário para gerar os arquivos css no deploy **/
+
 .page-enter-active,
 .page-leave-active {
   transition: all 0.1s;
