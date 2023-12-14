@@ -1,43 +1,42 @@
 <template>
   <div>
     <NuxtWelcome />
-    <div class="alerts">
-      <div v-for="(alert, index) in alerts" :key="index" class="alert">
-        {{ alert }}
-        <button @click="removeAlert(index)">Fechar</button>
+    <div class="favorites">
+      <div v-for="favorite in favoritesList" :key="favorite" class="favorite">
+        {{ favorite }}
+        <button @click="removeFromFavorites(favorite)">Fechar</button>
       </div>
     </div>
-    <button @click="addTestAlert">Adicionar Alerta de Teste</button>
+    <button @click="addToFavorites((favoritesList.length + 1).toString())">
+      Adicionar favorito
+    </button>
   </div>
 </template>
 
-<script>
-import { useAlertsStore } from '~/stores/index' // Certifique-se de usar o caminho correto para sua store
+<script setup lang="ts">
+import { useFavoritesStore } from '~/stores/favorites';
 
-export default {
-  setup() {
-    const alertsStore = useAlertsStore()
-    const alerts = alertsStore.allAlerts
+const favoritesStore = useFavoritesStore();
 
-    const removeAlert = (index) => {
-      alertsStore.removeAlert(index)
-    }
+import { onMounted } from 'vue';
 
-    const addTestAlert = () => {
-      alertsStore.addAlert('Este é um alerta de teste')
-    }
+onMounted(() => {
+  favoritesStore.initializeFavorites();
+});
 
-    return {
-      alerts,
-      removeAlert,
-      addTestAlert,
-    }
-  },
-}
+const addToFavorites = (cocktailId: string) => {
+  favoritesStore.addFavorite(cocktailId);
+};
+
+const removeFromFavorites = (cocktailId: string) => {
+  favoritesStore.removeFavorite(cocktailId);
+};
+
+const favoritesList = computed(() => favoritesStore.listFavorites());
+
 </script>
-
 <style>
-.alerts {
+.favorites {
   position: fixed;
   top: 0;
   right: 0;
@@ -47,7 +46,7 @@ export default {
   align-items: flex-end;
 }
 
-.alert {
+.favorite {
   background-color: #f0f0f0;
   padding: 8px;
   margin-top: 8px;
