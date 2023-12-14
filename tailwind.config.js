@@ -26,8 +26,9 @@ export default {
     },
 
     fontFamily: {
-      primary: "OpenSans, Helvetica, Arial, sans-serif",
-      secondary: "Righteous, sans-serif",
+      primary: ["Open Sans", "Helvetica", "Arial", "sans-serif"], 
+      secondary: ["Righteous", "sans-serif"], 
+      tertiary: ["Oooh Baby", "sans-serif"], 
     },
     fontSize: {
       xs: ".625rem",

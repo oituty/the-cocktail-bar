@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     families: {
       'Open Sans': true,
       Righteous: true,
+      'Oooh Baby': true,
     },
     display: 'swap',
   },
