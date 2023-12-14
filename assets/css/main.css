@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --white: #ffffff;
+    --white-light: #e5eef5;
+    --black: #1b2127;
+    --gray: #444444;
+    --primary: #2f9cdf;
+    --secondary: #207cc9;
+    --tertiary: #26c66c;
+    --sponsor-theme: #00a396;
+    --background-primary: #fafafa;
+    --background-secondary: #ffffff;
+    --background-tertiary: #fef1e1;
+    --background-orange: #f97d49;
+    --background-pastel-primary: #ffd498;
+    --background-pastel-secondary: #bbffd9;
+    --background-pastel-tertiary: #fff8ef;
+    --background-footer: #323f4d;
+    --title: #444444;
+    --subtitle: #444444;
+    --body: #444444;
+    --label: #444444;
+    --input-background: #ffffff;
+    --input-border: #cbebff;
+    --input-border-focus: #f97d49;
+    --input-scrollbar: #f97d49;
+    --input-misc-background: #f1f1f1;
+    /* utilizada nos inputs: InputSwitch, InputSlider e InputRangeSlider */
+    --placeholder: #0000007a;
+    --error: #e35050;
+    --success: #35b661;
+    --warning: #f1b540;
+    --disabled: rgba(225, 232, 237, 0.5);
+    --info: #f1f1f1;
+    --scrollbar-track: rgba(68, 68, 68, 0.15);
+    --scrollbar-thumb: #f97d49;
+    --button-shadow-primary: #3b4247;
+
+    body {
+        font-family: OpenSans, Helvetica, Arial, sans-serif;
+        color: var(--body);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-wrap: anywhere;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0.5rem;
+        height: 0.75rem;
+    }
+
+    ::-webkit-scrollbar-track {
+        -webkit-border-radius: 0.5rem;
+        background-color: var(--scrollbar-track);
+        border-radius: 0.75rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 0.5rem;
+        border-radius: 1rem;
+        background: var(--scrollbar-thumb);
+        border: 0.05rem solid var(--scrollbar-track);
+    }
+
+    h2 {
+        @apply text-4xl font-bold text-title;
+    }
+
+    h1 {
+        @apply text-2xl font-bold leading-9 text-title;
+    }
+
+    h3 {
+        @apply text-base font-bold leading-6 text-body;
+    }
+
+    h4 {
+        @apply text-5xl font-bold text-title;
+    }
+
+    p {
+        @apply text-base font-normal leading-6 text-body;
+    }
+
+    strong {
+        @apply text-base font-bold leading-6 text-body;
+    }
+
+    button {
+        @apply text-base font-bold leading-6;
+    }
+
+    .details {
+        @apply text-sm font-normal leading-5;
+    }
+
+    .info {
+        @apply text-xs font-normal leading-4;
+    }
+
+    .small-details {
+        @apply text-[.75rem] font-normal leading-4;
+    }
+
+    .label {
+        @apply mb-2 text-sm font-bold leading-5 text-label;
+    }
+
+    .options-label {
+        @apply text-base font-normal text-body;
+    }
+
+    .title-section {
+        @apply rounded-t bg-primary px-4 py-3 text-white;
+    }
+
+    .input-error {
+        @apply mt-2 text-right text-sm font-normal leading-5 text-error;
+    }
+
+    .screen-padding {
+        @apply px-screen-padding-sm md:px-screen-padding-md lg:px-screen-padding-lg xl:px-screen-padding;
+    }
+
+    .screen-padding-r {
+        @apply pr-screen-padding-sm md:pr-screen-padding-md lg:pr-screen-padding-lg xl:pr-screen-padding;
+    }
+
+    .screen-padding-l {
+        @apply pl-screen-padding-sm md:pl-screen-padding-md lg:pl-screen-padding-lg xl:pl-screen-padding;
+    }
+
+    .screen-margin-r {
+        @apply mr-screen-margin-sm md:mr-screen-margin-md lg:mr-screen-margin-lg xl:mr-screen-margin;
+    }
+
+    .screen-margin-l {
+        @apply ml-screen-margin-sm md:ml-screen-margin-md lg:ml-screen-margin-lg xl:ml-screen-margin;
+    }
+
+    .dot {
+        @apply mx-2 inline-block h-1 w-1 rounded-full bg-black;
+    }
+
+    .line-clamp-2 {
+        @apply overflow-hidden text-ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+}
