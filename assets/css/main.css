@@ -12,14 +12,14 @@
     --tertiary: #26c66c;
     --sponsor-theme: #00a396;
     --background-primary: #fafafa;
-    --background-secondary: #ffffff;
+    --background-secondary: #1E1E1E;
     --background-tertiary: #fef1e1;
     --background-orange: #f97d49;
     --background-pastel-primary: #ffd498;
     --background-pastel-secondary: #bbffd9;
     --background-pastel-tertiary: #fff8ef;
     --background-footer: #323f4d;
-    --title: #444444;
+    --title: #1E1E1E;
     --subtitle: #444444;
     --body: #444444;
     --label: #444444;
@@ -65,13 +65,15 @@
         border: 0.05rem solid var(--scrollbar-track);
     }
 
-    h2 {
-        @apply text-4xl font-bold text-title;
-    }
 
     h1 {
-        @apply text-2xl font-bold leading-9 text-title;
+        @apply text-4xl font-secondary font-bold leading-10 text-primary;
     }
+
+    h2 {
+        @apply text-xl leading-6 font-bold text-title;
+    }
+
 
     h3 {
         @apply text-base font-bold leading-6 text-body;
@@ -82,7 +84,7 @@
     }
 
     p {
-        @apply text-base font-normal leading-6 text-body;
+        @apply text-sm font-normal leading-4 text-body;
     }
 
     strong {

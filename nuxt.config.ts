@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     '@nuxtjs/google-fonts',
+    '@nuxt/image',
   ],
   googleFonts: {
     families: {
@@ -19,4 +20,14 @@ export default defineNuxtConfig({
     storesDirs: ['./stores/**'],
   },
   css: ['~/assets/css/main.css'],
+  image: {
+    dir: 'assets/images',
+  },
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
+    layoutTransition: {
+      name: 'slide',
+      mode: 'out-in', // default
+    },
+  },
 });
