@@ -1,8 +1,8 @@
 <template>
   <div class="flex flex-col gap-y-10">
-    <div v-if="!isLocalList">
-      <SelectCategory @categorySelected="onSelectCategory" />
-      <Search @updateSearchTerm="onSearch"></Search>
+    <div v-if="!isLocalList" class="grid gap-6 lg:grid-cols-7">
+      <Search class="lg:col-span-4" @updateSearchTerm="onSearch"></Search>
+      <SelectCategory class="lg:col-span-3" @categorySelected="onSelectCategory" />
     </div>
     <ul
       class="grid w-full gap-3 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3"

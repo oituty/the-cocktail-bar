@@ -3,41 +3,8 @@
 @tailwind utilities;
 
 :root {
-    --white: #ffffff;
-    --white-light: #e5eef5;
-    --black: #1b2127;
-    --gray: #444444;
-    --primary: #2f9cdf;
-    --secondary: #207cc9;
-    --tertiary: #26c66c;
-    --sponsor-theme: #00a396;
-    --background-primary: #fafafa;
-    --background-secondary: #1E1E1E;
-    --background-tertiary: #fef1e1;
-    --background-orange: #f97d49;
-    --background-pastel-primary: #ffd498;
-    --background-pastel-secondary: #bbffd9;
-    --background-pastel-tertiary: #fff8ef;
-    --background-footer: #323f4d;
-    --title: #1E1E1E;
-    --subtitle: #444444;
     --body: #444444;
-    --label: #444444;
-    --input-background: #ffffff;
-    --input-border: #cbebff;
-    --input-border-focus: #f97d49;
-    --input-scrollbar: #f97d49;
-    --input-misc-background: #f1f1f1;
-    /* utilizada nos inputs: InputSwitch, InputSlider e InputRangeSlider */
-    --placeholder: #0000007a;
-    --error: #e35050;
-    --success: #35b661;
-    --warning: #f1b540;
-    --disabled: rgba(225, 232, 237, 0.5);
-    --info: #f1f1f1;
-    --scrollbar-track: rgba(68, 68, 68, 0.15);
     --scrollbar-thumb: #f97d49;
-    --button-shadow-primary: #3b4247;
 
     body {
         font-family: OpenSans, Helvetica, Arial, sans-serif;
@@ -65,7 +32,6 @@
         border: 0.05rem solid var(--scrollbar-track);
     }
 
-
     h1 {
         @apply text-4xl font-secondary font-bold leading-10 text-primary;
     }
@@ -73,7 +39,6 @@
     h2 {
         @apply text-xl leading-6 font-bold text-title;
     }
-
 
     h3 {
         @apply text-base font-bold leading-6 text-body;
@@ -121,30 +86,6 @@
 
     .input-error {
         @apply mt-2 text-right text-sm font-normal leading-5 text-error;
-    }
-
-    .screen-padding {
-        @apply px-screen-padding-sm md:px-screen-padding-md lg:px-screen-padding-lg xl:px-screen-padding;
-    }
-
-    .screen-padding-r {
-        @apply pr-screen-padding-sm md:pr-screen-padding-md lg:pr-screen-padding-lg xl:pr-screen-padding;
-    }
-
-    .screen-padding-l {
-        @apply pl-screen-padding-sm md:pl-screen-padding-md lg:pl-screen-padding-lg xl:pl-screen-padding;
-    }
-
-    .screen-margin-r {
-        @apply mr-screen-margin-sm md:mr-screen-margin-md lg:mr-screen-margin-lg xl:mr-screen-margin;
-    }
-
-    .screen-margin-l {
-        @apply ml-screen-margin-sm md:ml-screen-margin-md lg:ml-screen-margin-lg xl:ml-screen-margin;
-    }
-
-    .dot {
-        @apply mx-2 inline-block h-1 w-1 rounded-full bg-black;
     }
 
     .line-clamp-2 {
