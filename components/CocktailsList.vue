@@ -1,6 +1,12 @@
 <template>
-  <div>
-    <ul class="grid gap-3 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3">
+  <div class="flex flex-col gap-y-10">
+    <div v-if="!isLocalList">
+      <SelectCategory @categorySelected="onSelectCategory" />
+      <Search @updateSearchTerm="onSearch"></Search>
+    </div>
+    <ul
+      class="grid w-full gap-3 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3"
+    >
       <template v-if="isLoading">
         <li v-for="number in 10" :key="number">
           <Card :is-loading="isLoading" />
@@ -45,11 +51,30 @@ function getCocktailsList() {
   getCocktailsApiList();
 }
 
-async function getCocktailsApiList(searchQuery?: string) {
+function onSelectCategory(category?: string) {
+  getCocktailsApiList({category})
+}
+
+
+const debouncedSearch = useDebounce((searchTerm?: string) => {
+  getCocktailsApiList({ searchTerm });
+}, 500);
+
+function onSearch(searchTerm?: string) {
+  debouncedSearch(searchTerm);
+}
+
+async function getCocktailsApiList(query?: {category?: string, searchTerm?: string}) {
+  isLoading.value = true;
+
   const params = new URLSearchParams();
 
-  if (searchQuery) {
-    params.append('query', searchQuery);
+  if (query?.category) {
+    params.append('category', query.category);
+  }
+
+  if (query?.searchTerm) {
+    params.append('searchTerm', query.searchTerm);
   }
 
   setTimeout(async () => {
