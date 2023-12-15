@@ -29,7 +29,7 @@
       :style="backgroundStyles"
     ></div>
     <div class="z-10 flex flex-col justify-between w-full">
-      <NuxtLink :to="`/cocktails/${cocktail.idDrink}`" class="flex-1">
+      <NuxtLink :to="`${currentPath}/${cocktail.idDrink}`" class="flex-1">
         <h3 :class="['p-4 font-secondary font-extrabold !text-xl', isFavorite ? '!text-primary ' : '!text-secondary ']">
           {{ cocktail.strDrink }}
         </h3>
@@ -44,7 +44,7 @@
             ]"
             @click="toggleFavorite"
           >
-            <NuxtImg
+            <NuxtImg :alt="`Picture of cocktail ${cocktail.strDrink}`" title="Favorite"
               :src="isFavorite ? '/cocktail_favorited.png' : '/cocktail.png'" width="20"
             ></NuxtImg>
           </button>
@@ -73,13 +73,15 @@ const props = defineProps({
 });
 
 const img = useImage();
+const router = useRouter();
+const currentPath = router.currentRoute.value.path
 
 const backgroundStyles = computed(() => {
   if (!props.cocktail) {
     return '';
   }
   const imgUrl = img(props.cocktail.strDrinkThumb);
-  return { backgroundImage: `url('${imgUrl}')` };
+  return { backgroundImage: `url('${imgUrl}/preview')` };
 });
 
 const favoritesStore = useFavoritesStore();

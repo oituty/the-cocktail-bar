@@ -1,7 +1,7 @@
 <template>
   <div class="gap-y-10 flex flex-1 flex-col justify-center items-center">
     <div class="w-full relative justify-center items-center flex">
-      <NuxtImg src="/cocktails.png" width="400" />
+      <NuxtImg alt="Cocktails illustrations" src="/cocktails.png" width="400" />
       <div
         class="bg-background-tertiary flex justify-center items-center bottom-[25%] h-auto min-h-[4rem] absolute py-2 px-10 w-full max-w-md rounded-lg"
       >

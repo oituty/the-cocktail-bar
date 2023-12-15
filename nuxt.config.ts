@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     '@nuxtjs/google-fonts',
-    '@nuxt/image', 'nuxt-icon'
+    '@nuxt/image', 'nuxt-icon', 'nuxt-lodash'
   ],
   googleFonts: {
     families: {
@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     storesDirs: ['./stores/**'],
   },
   css: ['~/assets/css/tailwind.css'],
+  // transição global entre páginas
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     layoutTransition: {
