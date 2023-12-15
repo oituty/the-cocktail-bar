@@ -79,7 +79,7 @@ const backgroundStyles = computed(() => {
     return '';
   }
   const imgUrl = img(props.cocktail.strDrinkThumb);
-  return { backgroundImage: `url('${imgUrl}')` };
+  return { backgroundImage: `url('${imgUrl}/preview')` };
 });
 
 const favoritesStore = useFavoritesStore();
