@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col h-screen overflow-hidden">
     <Navbar />
-    <div class="flex flex-1 overflow-hidden">
+    <div class="flex relative flex-1 overflow-hidden">
       <transition name="page" v-if="isBarOpened">
         <main class="flex flex-1 overflow-hidden">
           <slot />
@@ -27,7 +27,7 @@ const isBarOpened = computed(() => barStore.isBarOpen);
 <style>
 .slide-enter-active,
 .slide-leave-active {
-  transition: transform 0.5s;
+  transition: transform 1s;
 }
 
 .slide-enter-from,

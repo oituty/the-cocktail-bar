@@ -37,5 +37,6 @@ export interface Cocktail {
     strMeasure14: string | null;
     strMeasure15: string | null;
     dateModified: string;
+    strTags: string | null;
   }
   

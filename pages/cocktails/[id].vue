@@ -4,16 +4,12 @@
     has-back-button
     :sidebar-img-url="cocktail?.strDrinkThumb"
   >
-    oi
+    <CocktailDetails v-if="cocktail" :cocktail="cocktail"></CocktailDetails>
   </CocktailsBasePage>
 </template>
 
 <script lang="ts" setup>
 import { type Cocktail } from "~/server/api/model/cocktail";
-
-const props = defineProps({
-  id: String
-});
 
 const cocktail = ref<Cocktail | null>(null);
 const isLoading = ref(true);
@@ -47,7 +43,6 @@ async function getCocktail() {
     }
 
     cocktail.value = data.value?.body;
-    console.log("cocktail.value", cocktail.value)
     isLoading.value = false;
 
   }, 500);

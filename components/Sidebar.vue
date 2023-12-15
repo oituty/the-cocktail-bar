@@ -5,7 +5,6 @@
   ></header>
 </template>
 <script setup lang="ts">
-import { useBarStore } from '~/stores/barState';
 
 const props = defineProps({
   imgUrl: {
@@ -14,11 +13,7 @@ const props = defineProps({
   },
 });
 
-const barStore = useBarStore();
-const isBarOpened = computed(() => barStore.isBarOpen);
-
 const img = useImage();
-
 const backgroundStyles = computed(() => {
 
   if (!props.imgUrl) {
