@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     '@nuxtjs/google-fonts',
-    '@nuxt/image',
+    '@nuxt/image', 'nuxt-icon'
   ],
   googleFonts: {
     families: {
@@ -32,7 +32,6 @@ export default defineNuxtConfig({
       // cssnano para minificação de CSS
       cssnano: process.env.NODE_ENV === 'production' ? { preset: 'default' } : false,
     },
-    
   },
-
+  plugins: ['~/plugins/toast.ts'],
 });
