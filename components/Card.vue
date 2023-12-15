@@ -29,7 +29,7 @@
       :style="backgroundStyles"
     ></div>
     <div class="z-10 flex flex-col justify-between w-full">
-      <NuxtLink :to="`/cocktails/${cocktail.idDrink}`" class="flex-1">
+      <NuxtLink :to="`${currentPath}/${cocktail.idDrink}`" class="flex-1">
         <h3 :class="['p-4 font-secondary font-extrabold !text-xl', isFavorite ? '!text-primary ' : '!text-secondary ']">
           {{ cocktail.strDrink }}
         </h3>
@@ -73,6 +73,8 @@ const props = defineProps({
 });
 
 const img = useImage();
+const router = useRouter();
+const currentPath = router.currentRoute.value.path
 
 const backgroundStyles = computed(() => {
   if (!props.cocktail) {

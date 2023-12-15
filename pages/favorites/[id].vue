@@ -1,5 +1,5 @@
 <template>
-  <CocktailsBasePage has-back-button :sidebar-img-url="cocktail?.strDrinkThumb">
+  <CocktailsBasePage has-back-button back-button-text="Back to favorites" :sidebar-img-url="cocktail?.strDrinkThumb">
     <CocktailDetails v-if="cocktail" :cocktail="cocktail"></CocktailDetails>
   </CocktailsBasePage>
 </template>

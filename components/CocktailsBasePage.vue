@@ -3,7 +3,14 @@
     <div class="p-10 hidden md:flex"><Sidebar :img-url="sidebarImgUrl" /></div>
 
     <div class="p-4 md:p-10 flex flex-col overflow-auto">
-      <button v-if="hasBackButton" class="text-primary flex items-center mb-10" @click="router.back"><Icon name="maki:arrow" color="primary" class="mr-2 rotate-180" /> Back to cocktails </button>
+      <button
+        v-if="hasBackButton"
+        class="text-primary flex items-center mb-10"
+        @click="router.back"
+      >
+        <Icon name="maki:arrow" color="primary" class="mr-2 rotate-180" />
+        {{ backButtonText }}
+      </button>
       <h1 v-if="title" class="mb-4">{{ title }}</h1>
       <p v-if="description" class="mb-10">{{ description }}</p>
       <slot />
@@ -23,13 +30,17 @@ defineProps({
   },
   sidebarImgUrl: {
     type: String,
-    required: false
+    required: false,
   },
   hasBackButton: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
+  backButtonText: {
+    type: String,
+    default: "Back to cocktails",
+  },
 });
 
-const router = useRouter()
+const router = useRouter();
 </script>
