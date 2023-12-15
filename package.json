@@ -29,6 +29,7 @@
     "@storybook/vue3": "7.5.3",
     "@types/node": "^18.17.5",
     "nuxt": "^3.8.2",
+    "nuxt-icon": "^0.6.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "7.5.3",
@@ -38,7 +39,8 @@
   "dependencies": {
     "@nuxt/image": "^1.1.0",
     "@pinia/nuxt": "^0.5.1",
-    "pinia": "^2.1.7"
+    "pinia": "^2.1.7",
+    "vue3-toastify": "^0.1.14"
   },
   "engines": {
     "node": "18.x"
