@@ -35,8 +35,8 @@
           you!
         </p>
 
-        <NuxtLink to="/" class="text-primary font-extrabold hover:underline"
-          >Return to Bar</NuxtLink
+        <button @click="goToBar" class="text-primary font-extrabold hover:underline"
+          >Return to Bar</button
         >
       </div>
     </div>
@@ -45,4 +45,22 @@
 
 <script setup lang="ts">
 defineProps(['error']);
+
+useHead({
+  title: 'Error',
+  meta: [
+    {
+      name: 'description',
+      content: 'Page not found',
+    },
+  ],
+});
+
+const barStore = useBarStore()
+const router = useRouter()
+
+function goToBar() {
+  barStore.openBar();
+  router.push("/cocktails")
+}
 </script>
