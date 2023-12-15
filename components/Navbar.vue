@@ -20,7 +20,7 @@
           <NuxtLink
             :to="path"
             :title="label"
-            class="text-white hover:underline"
+            class="text-white font-bold hover:underline"
             active-class=" transition-all !text-primary"
           >
             {{ label }}
