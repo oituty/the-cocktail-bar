@@ -1,6 +1,7 @@
 
 # TheCocktail Bar
 
+- Veja o resultado pela link do [Vercel](https://the-cocktail-bar.vercel.app/)
 - Plataforma para visualizar os coquetéis disponíveis no [TheCocktailDB](https://www.thecocktaildb.com/api.php)
 
 ## Nuxt 3 Minimal Starter
