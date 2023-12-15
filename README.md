@@ -3,6 +3,7 @@
 
 - Veja o resultado pela link do [Vercel](https://the-cocktail-bar.vercel.app/)
 - Plataforma para visualizar os coquetéis disponíveis no [TheCocktailDB](https://www.thecocktaildb.com/api.php)
+- Visualize o figma criado para desenvolver a ideia [Figma](https://www.figma.com/proto/WvHHGgUfPhyNea8YrBsMPi/TheCocktail?type=design&node-id=84-109&t=C43z2odmgpE0fbeJ-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=84%3A109&mode=design)
 
 ## Nuxt 3 Minimal Starter
 
