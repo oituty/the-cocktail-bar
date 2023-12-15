@@ -10,7 +10,7 @@
           <span class="font-light">The</span>Cocktail
         </h2>
         <p class="!text-gray font-light">
-          Bar {{ isBarOpened ? 'opened' : 'closed' }}
+          Bar {{ hasError ? "not found" : isBarOpened ? "opened" : "closed" }}
         </p>
       </div>
     </div>
@@ -44,6 +44,13 @@
 </template>
 <script setup lang="ts">
 import { useBarStore } from '~/stores/barState';
+
+defineProps({
+  hasError: {
+    type: Boolean,
+    required: false,
+  },
+});
 
 const routers = [
   { path: '/cocktails', label: 'Cocktails' },
