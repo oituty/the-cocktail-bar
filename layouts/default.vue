@@ -11,7 +11,7 @@
 
       <transition name="slide">
         <ClosedBarBanner
-          class="absolute z-10 w-full right-0 h-full"
+          class="absolute z-10 w-full right-0 h-full overflow-auto"
           v-show="!isBarOpened"
         />
       </transition>
