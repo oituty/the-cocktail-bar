@@ -5,7 +5,7 @@
     <h1 class="!text-title max-w-[15rem] text-center !text-5xl">The Cocktail</h1>
 
     <div class="w-full relative justify-center items-center flex">
-        <NuxtImg src="/cocktails.png" width="400" />
+        <NuxtImg alt="Cocktails illustrations" src="/cocktails.png" width="400" />
         <button class="bg-background-tertiary bottom-[25%] absolute !text-xl py-6 px-10 w-full max-w-md rounded-lg uppercase !font-black text-primary" @click="openTheBar">Open the bar <Icon name="maki:arrow" color="primary" class="ml-2" /></button>
     </div>
 

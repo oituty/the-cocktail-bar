@@ -44,7 +44,7 @@
             ]"
             @click="toggleFavorite"
           >
-            <NuxtImg title="Favorite"
+            <NuxtImg :alt="`Picture of cocktail ${cocktail.strDrink}`" title="Favorite"
               :src="isFavorite ? '/cocktail_favorited.png' : '/cocktail.png'" width="20"
             ></NuxtImg>
           </button>

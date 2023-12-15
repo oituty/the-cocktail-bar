@@ -9,7 +9,6 @@
 </template>
 
 <script setup lang="ts">
-import { type Cocktail } from '~/server/api/model/cocktail';
 
 useHead({
   title: 'Favorites',

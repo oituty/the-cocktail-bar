@@ -7,6 +7,20 @@
 <script lang="ts" setup>
 import { type Cocktail } from '~/server/api/model/cocktail';
 
+useHead({
+  title: 'Cocktail',
+  meta: [
+    {
+      name: 'description',
+      content: 'Cocktail details',
+    },
+  ],
+});
+
+definePageMeta({
+  middleware: 'check-bar-open',
+});
+
 const cocktail = ref<Cocktail | null>(null);
 
 onMounted(getCocktail);
