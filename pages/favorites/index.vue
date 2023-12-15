@@ -1,10 +1,10 @@
 <template>
   <CocktailsBasePage
     title="Favorites"
-    description="Search your favorite cocktails"
+    description="List of your favorite cocktails"
     sidebar-img-url="/background-image.png"
   >
-    <CocktailsList api-url="/api/cocktails" />
+    <CocktailsList is-local-list :cocktails-default-list="favorites" />
   </CocktailsBasePage>
 </template>
 
@@ -25,33 +25,7 @@ definePageMeta({
   middleware: 'check-bar-open',
 });
 
-const favorites = ref<Cocktail[]>([]);
+const favoritesStore = useFavoritesStore();
 
-onMounted(getCocktailsList);
-const { $toastify } = useNuxtApp();
-
-async function getCocktailsList(searchQuery?: string) {
-  const params = new URLSearchParams();
-
-  if (searchQuery) {
-    params.append('query', searchQuery);
-  }
-
-  const url = `/api/cocktails?${params.toString()}`;
-
-  const { data } = await useFetch<{ body: any; status: any; error?: any }>(
-    url,
-    {
-      cache: 'force-cache', // cache for 5 minutes
-    }
-  );
-
-  if (data.value?.error) {
-    $toastify(data.value?.error, { type: 'error' });
-    console.error(data.value?.error);
-    return;
-  }
-
-  favorites.value = data.value?.body.concat(data.value?.body);
-}
+const favorites = computed(() => favoritesStore.listFavorites());
 </script>

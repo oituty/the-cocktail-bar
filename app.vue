@@ -26,19 +26,10 @@ useHead({
   ],
 });
 
-onMounted(() => {
+onBeforeMount(() => {
   favoritesStore.initializeFavorites();
 });
 
-const addToFavorites = (cocktailId: string) => {
-  favoritesStore.addFavorite(cocktailId);
-};
-
-const removeFromFavorites = (cocktailId: string) => {
-  favoritesStore.removeFavorite(cocktailId);
-};
-
-const favoritesList = computed(() => favoritesStore.listFavorites());
 </script>
 <style>
 @import '~/assets/css/tailwind.css'; /** Necessário para gerar os arquivos css no deploy **/

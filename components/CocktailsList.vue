@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul class="grid gap-3 lg:grid-cols-2 xl:grid-cols-3">
+    <ul class="grid gap-3 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3">
       <template v-if="isLoading">
         <li v-for="number in 10" :key="number">
           <Card :is-loading="isLoading" />
@@ -21,8 +21,13 @@ import { type Cocktail } from '~/server/api/model/cocktail';
 const props = defineProps({
   apiUrl: {
     type: String,
-    required: true,
+    required: false,
   },
+  cocktailsDefaultList: {
+    type: Array as () => Cocktail[],
+    required: false,
+  },
+  isLocalList: Boolean,
 });
 
 const cocktails = ref<Cocktail[]>([]);
@@ -31,7 +36,16 @@ const isLoading = ref(true);
 onMounted(getCocktailsList);
 const { $toastify } = useNuxtApp();
 
-async function getCocktailsList(searchQuery?: string) {
+function getCocktailsList() {
+  if (props.isLocalList) {
+    cocktails.value = props.cocktailsDefaultList ?? [];
+    isLoading.value = false;
+    return;
+  }
+  getCocktailsApiList();
+}
+
+async function getCocktailsApiList(searchQuery?: string) {
   const params = new URLSearchParams();
 
   if (searchQuery) {
@@ -55,9 +69,7 @@ async function getCocktailsList(searchQuery?: string) {
     }
 
     cocktails.value = data.value?.body;
-      isLoading.value = false;
-
+    isLoading.value = false;
   }, 500);
-
 }
 </script>
