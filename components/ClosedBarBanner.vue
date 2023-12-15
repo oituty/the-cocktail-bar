@@ -10,7 +10,7 @@
     </div>
 
     <div class="flex flex-col justify-end text-center gap-y-1  items-center">
-        <h5 class="!font-light text-sm mb-4">Developed by:</h5>
+        <span class="!font-light text-sm mb-4">Developed by:</span>
         <h2>TAYNÁ A. RODRIGUES</h2>
         <a href="mailto:tayna.tech@gmail.com">tayna.tech@gmail.com</a>
     </div>
