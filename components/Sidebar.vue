@@ -1,19 +1,25 @@
 <template>
   <header
-    class="h-full w-full bg-black bg-cover bg-center bg-no-repeat justify-center items-end p-10"
+    class="h-full w-full bg-gray bg-cover bg-center bg-no-repeat justify-center items-end p-10"
     :style="backgroundStyles"
   ></header>
 </template>
 <script setup lang="ts">
-import { useBarStore } from '~/stores/barState';
 
-const barStore = useBarStore();
-const isBarOpened = computed(() => barStore.isBarOpen);
+const props = defineProps({
+  imgUrl: {
+    type: String,
+    required: false,
+  },
+});
 
 const img = useImage();
-
 const backgroundStyles = computed(() => {
-  const imgUrl = img('/background-image.png');
+
+  if (!props.imgUrl) {
+    return ""
+  }
+  const imgUrl = img(props.imgUrl);
   return { backgroundImage: `url('${imgUrl}')` };
 });
 </script>
