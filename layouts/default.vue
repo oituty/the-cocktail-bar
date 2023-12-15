@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col relative h-screen overflow-hidden">
-    <NuxtImg src="/closed_banner.svg" v-if="!isBarOpened" width="500" class="absolute top-0 left-0 z-20" />
+    <NuxtImg src="/closed_banner.svg" alt="Closed bar banner" v-if="!isBarOpened" width="500" class="absolute top-0 left-0 z-20" />
     <Navbar />
     <div class="flex relative flex-1 overflow-hidden">
       <transition name="page" v-if="isBarOpened">
