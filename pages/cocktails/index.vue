@@ -1,5 +1,5 @@
 <template>
-  <CocktailsBasePage title="Cocktails" description="Search our cocktails" sidebar-img-url="/background-image.png">
+  <CocktailsBasePage title="Cocktails" description="Explore our handpicked selection of classic and unique cocktails, perfect for any occasion." sidebar-img-url="/background-image.png">
     <CocktailsList api-url="/api/cocktails" />
   </CocktailsBasePage>
 </template>
